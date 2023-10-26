@@ -1,0 +1,85 @@
+.employouter{
+    height: 100vh;
+    
+    width: 80%;
+    margin-left: 2%;
+      overflow-y: scroll;
+}
+.employmenu{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.employtit{
+    font-size: 130%;
+    margin-left: 5%;
+   
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+}
+.employadd{
+    font-size: 130%;
+    margin-right: 5%;
+   margin-bottom: 1%;
+    background-color: rgb(14,28,46);  
+    padding: 0.5%;
+    color: white;
+    padding-top: 1%;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 5%;
+    text-decoration: none;
+}
+.employadd:hover{
+    background-color: rgb(38, 144, 186);
+    cursor: pointer;
+}
+.employtable{
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid skyblue;
+    border-collapse: collapse;
+    border-style: dotted;
+  }
+  th,td{
+    text-align: center;
+    padding: 2% 0;
+    
+  }
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  tr:hover{
+    cursor: pointer;
+  }
+  .update{
+    display: inline-block;
+    background-color: rgb(225, 157, 69);
+    padding:5%;
+    border-radius: 15%;
+   
+  }
+  .update:hover{  
+    cursor: pointer;
+    padding: 7%;
+  }
+  .delete{
+    display: inline-block;
+    background-color: rgb(211, 37, 37);
+    color: white;
+    padding:5%;
+    margin-left: 6%;
+    border-radius: 15%;
+
+    
+  }
+  .delete:hover{  
+    cursor: pointer;
+    padding: 7%;
+  }
+  .input_form1{
+    margin-top: 3%;
+    width: 50%;
+    height:2%;
+}

@@ -1,0 +1,83 @@
+#outer{
+    
+   
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+#mailid,#password{
+    padding: 2% 15%;
+    margin: 3% 0;
+   
+    border-radius: 5%;
+   display: block;
+   border-radius: 10%;
+   width: 70%;
+}
+
+#labelmail,#labelpass{
+    color: #D8E4DA;
+    font-size: 20px;    
+}
+#login{
+    padding: 3% 10%;
+    margin-right: 15%;
+}
+.signup{
+    margin-right: 17%;
+    margin-left: 15%;
+    padding: 4% 8%;
+    border-radius: 20%;
+   
+
+}
+.signup:hover{
+    background-color: #A1ADA3;
+    border:2px solid white;
+   
+}
+#mailid:hover,#password:hover{
+    background-color: #A1ADA3;
+    border:2px solid white;
+}
+.forgot{
+    margin-top: 15%;
+    margin-left: 30%;   
+    cursor: pointer;
+}
+.react-head{
+    padding-bottom: 10%;
+    text-align: center;
+    color: #D8E4DA;
+}
+#inner{
+    background-color: #1B2121;
+    text-align: center;
+    width: 20% ;
+    padding: 4%;
+    border-radius: 5% 15% 5%;
+}
+.info{
+    color: #D8E4DA;
+}
+.login-link{
+    color: #D8E4DA;
+}
+.indicator{
+    color: #DD0000;
+   font-size: 15px;
+   font-weight: 10%;
+}
+.pairer{
+     margin-bottom: 10%;
+}
+.heading,#labelmail,#labelpass,.down-react{
+    font-family: 'Dosis', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Libre Baskerville', serif;
+}
+

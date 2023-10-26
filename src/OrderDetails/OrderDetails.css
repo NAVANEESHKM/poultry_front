@@ -1,0 +1,99 @@
+.outerorder{
+    text-align: center;
+    height: 100vh;
+    width: 80%;
+    margin-left: 2%;
+    overflow-y: scroll;
+    position: relative;
+    z-index: 1;
+}
+.order {
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+
+}
+
+.innerorder{
+    background-color:rgb(191, 223, 233);
+    width:50%;
+    border-radius: 20%;
+    border-radius: 100px 50px;
+    box-shadow: 10px 10px 10px rgb(47, 54, 62);
+
+}
+.innerorder:hover{
+    background-color:rgb(171, 224, 245);
+        cursor: pointer;
+}
+.orderadder{
+    z-index: 2; 
+    background-color: rgb(14,28,46);
+    color: white;
+    padding: 1%; 
+    padding-left: 2%;
+    padding-right: 2%; 
+    border-radius: 20%;  
+}
+.orderouter{
+    text-align: center  ;
+        margin-top: 3%;
+        margin-bottom: 3%;
+}
+.order1{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.innerorder1{
+    width:50%;
+    border-radius: 20%;
+}
+.orderedit{
+    padding: 2%;
+    margin: 2%;
+    border-radius: 20%;
+    background-color: rgb(225, 157, 69);
+    color: whitesmoke;
+}
+.orderedit:hover{
+    cursor: pointer;
+    background-color: rgb(224, 130, 8);
+}
+.orderdelete{
+    padding: 2%;
+    margin: 2%;
+    border-radius: 20%;
+    background-color: rgb(211, 37, 37);
+    color: whitesmoke;
+}
+.orderdelete:hover{
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+}
+.dataform{
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Mukta', sans-serif;
+    font-family: bold;
+    font-weight: 1000;
+    font-size: 185%;
+    color: rgb(14,28,46);
+    font-size: 19px;
+}
+
+.submit1{
+    width: 40%;
+    height: 10%;    
+    padding: 5%;
+    margin-top: 3%;
+    margin-left: 35%;
+    background-color: rgb(14,28,46);
+    border-radius: 10%;
+    color: white;
+}

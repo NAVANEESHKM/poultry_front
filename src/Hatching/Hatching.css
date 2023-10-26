@@ -1,0 +1,37 @@
+.Hatchmain{
+    height: 100vh;
+    width: 80%;
+    margin-left: 2%;
+}
+.Hatchmenu{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Hatchtitle{
+    margin-left: 5%;
+    font-size: 130%;
+    font-family: 'Dosis', sans-serif;
+font-family: 'Libre Baskerville', serif;
+    
+}
+.Hatchadder{
+    font-size: 130%;
+    margin-right: 5%;
+   margin-bottom: 1%;
+    background-color: rgb(14,28,46); 
+    color: white; 
+    padding: 0.5%;  
+    padding-top: 1%;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    border-radius: 5%;
+    text-decoration: none;
+}
+.Hatchadder:hover{
+    background-color: rgb(47, 153, 195);
+}
+table{
+    width: 100%;
+}

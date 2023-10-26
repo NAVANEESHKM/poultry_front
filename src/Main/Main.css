@@ -1,0 +1,114 @@
+.leftblock{
+    width:16%;
+    height: 100vh;
+    background-color: rgb(14,28,46);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.innerinfo{
+    padding-top: 35vh;
+    color: white;
+    width: 80%;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Mukta', sans-serif;
+}
+.innerinfo>*{
+    text-decoration: none;
+}
+
+.con1{
+  padding: 10% 0%;
+  color: white;
+}
+.con2{
+  padding: 10% 0%;
+  color: white;
+}
+.con3{
+  padding: 10% 0%;
+  color: white;
+}
+.con4{
+  padding: 10% 0%;
+  color: white;
+}
+.con5{
+  padding: 10% 0%;
+  color: white;
+}
+.con6{
+  margin-top: 90%;
+  padding: 10% 0%;
+  color: white;
+}
+.con1:hover{
+  cursor: pointer;
+}
+.con2,.con3,.con4,.con5,.con6:hover{
+    
+   
+    cursor: pointer;
+}
+.prof{
+    width: 70%;
+    height: 15%;
+    position: absolute;
+   margin-top: 15%;
+   border-radius: 100%;
+   
+}
+.detailstop{
+  text-align: center;
+  width: 70%;
+  height: 15%;
+  position: absolute;
+ margin-top: 70%;
+ border-radius: 100%;
+ color: white;
+ 
+}
+.detailstop button{
+    border-radius: 10%;
+    padding: 3% 8%;
+}
+.detailstop button:hover{
+  
+
+  
+  cursor: pointer;
+
+}
+.decider{
+    display:flex;
+    flex-direction: row;
+    z-index: -1;
+    
+}
+.popup{
+  margin-left: 400%;
+  background-color: rgb(180, 224, 242);
+  width: 200%;
+  height: 350%;
+  z-index: 1;
+  position: absolute;
+  color: black;
+  border-radius: 10%;
+  
+}
+.popup-content{
+  padding: 3%;
+}
+.popup-content label{
+        margin-top: 80%;
+}
+.popinner{
+  margin-top: 10%;
+}
+.paypop{
+  margin-top: 5%;
+}

@@ -1,0 +1,48 @@
+.outer_form{
+   
+    display: flex;
+    flex-direction: column;
+        width: 30%;
+
+}
+.outer_form input{
+   padding:2%;
+   border-radius: 10%;
+}
+.outer_form label{
+    margin-top: 8%;
+}
+
+.extra_outer{
+    height: 80vh;
+    width: 80%;
+  
+}   
+.form_style{
+    width: 50%;
+    height: 95%;
+    background-color: rgb(201, 234, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    box-shadow: 10px 10px 30px rgb(14,28,46);
+}
+.input_form{
+    margin-top: 3%;
+    width: 100%;
+    height:2%;
+}
+.submit{
+    width: 30%;
+    height: 3%;
+    margin-top: 3%;
+    margin-left: 35%;
+    padding: 5% 10%;
+    border-radius: 20%;
+    background-color: orangered;
+}
+.submit :hover{
+    background-color: rgb(228, 103, 57);
+
+}
