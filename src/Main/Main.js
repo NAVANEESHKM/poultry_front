@@ -144,7 +144,7 @@ export function Main() {
                     </div>
                     <div className="innerinfo">
 
-                         <Link onClick={() =>{setternum(0); help()}} to="/front"><p className="con1">DashBoard</p></Link>
+                         <Link onClick={() =>{setternum(0); help()}} to="/front"><p className="con1">DashBoard navaneesh</p></Link>
                          <Link onClick={() =>{setternum(1); help()}} to="/front/employee"> <p className="con2">Employee Details</p></Link>
                          <Link onClick={() =>{setternum(2); help()}} to="/front/hatching"><p className="con3">Production Details</p></Link>
                          <Link onClick={() =>{setternum(3); help()}} to="/front/order"><p className="con4">Order Details</p></Link>
