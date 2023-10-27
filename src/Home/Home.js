@@ -50,7 +50,7 @@ const [empstate,setempstate]=useState(0)
     const fetchDataOrder = async () => {
       console.log("well it is called here")
       try {
-        const response = await fetch('https://poultry-back.vercel.app/api/month', {
+        const response = await fetch('http://localhost:4000/api/month', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ const [empstate,setempstate]=useState(0)
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://poultry-back.vercel.app/api/getone/customer',{
+        const response = await fetch('http://localhost:4000/api/getone/customer',{
           method: 'POST',
         headers: {
           'Content-Type': 'application/json',
