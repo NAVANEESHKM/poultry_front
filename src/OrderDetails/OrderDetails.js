@@ -41,7 +41,7 @@ export function OrderDetails(){
         }
 
         try {
-            const response = await fetch('http://localhost:4000/api/order/post', {
+            const response = await fetch('https://poultry-back.vercel.app/api/order/post', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export function OrderDetails(){
     const fetchDataOrder = async () => {
         console.log("well it is called here")
         try {
-          const response = await fetch('http://localhost:4000/api/order/get',{
+          const response = await fetch('https://poultry-back.vercel.app/api/order/get',{
             method: 'POST',
             headers: {
           'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ export function OrderDetails(){
            mailfind:storedValue 
        }
        try {
-           const response = await fetch('http://localhost:4000/api/order/update', {
+           const response = await fetch('https://poultry-back.vercel.app/api/order/update', {
              method: 'POST',
              headers: {
                'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export function OrderDetails(){
    }
    const orderdelete=async(val)=>{
     try {
-      const response = await fetch('http://localhost:4000/api/order/delete', {
+      const response = await fetch('https://poultry-back.vercel.app/api/order/delete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

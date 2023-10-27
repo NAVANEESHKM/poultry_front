@@ -16,7 +16,7 @@ import  "./Signup.css"
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/customer/find", {
+      const response = await fetch("https://poultry-back.vercel.app/api/customer/find", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ import  "./Signup.css"
     
 
     try {
-      const response = await fetch("http://localhost:4000/api/customer/create", {
+      const response = await fetch("https://poultry-back.vercel.app/api/customer/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ import  "./Signup.css"
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/customer/update", {
+      const response = await fetch("https://poultry-back.vercel.app/api/customer/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -38,7 +38,7 @@ export function Hatching(){
         const fetchData = async () => {
           console.log("well it is called here")
           try {
-            const response = await fetch('http://localhost:4000/api/profile/get/hatching',{
+            const response = await fetch('https://poultry-back.vercel.app/api/profile/get/hatching',{
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ export function Hatching(){
       console.log(post1)
 
       try {
-        const response = await fetch('http://localhost:4000/api/profile/hatch/edit', {
+        const response = await fetch('https://poultry-back.vercel.app/api/profile/hatch/edit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ export function Hatching(){
     }
     console.log("The values are stored here for sending",delhatch)
     try {
-      const response = await fetch('http://localhost:4000/api/profile/delete/hatch', {
+      const response = await fetch('https://poultry-back.vercel.app/api/profile/delete/hatch', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
