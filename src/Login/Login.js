@@ -18,7 +18,7 @@ import { Link, useNavigate } from 'react-router-dom';
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/customer/find", {
+      const response = await fetch("https://poultry-back.vercel.app/api/customer/find", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
