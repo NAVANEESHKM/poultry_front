@@ -193,7 +193,7 @@ const chartOptions = {
         <div className="homeinner">
           <div className="maincontent">
             <p>{orderstate}</p>
-            <p>Order Details</p>
+            <p>Order Details pp</p>
           </div>
           <div className="mainimblock">
             <img className="mainimage" src={eggicon} alt="production" />
