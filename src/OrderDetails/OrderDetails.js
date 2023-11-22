@@ -1,6 +1,10 @@
 import React, { useState,useEffect } from "react";
+import {useNavigate} from "react-router-dom"
 import "./OrderDetails.css";
 export function OrderDetails(){
+  const navigate = useNavigate();
+
+  const [count,setcount]=useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const toggleVisibility = () => {
@@ -18,10 +22,6 @@ export function OrderDetails(){
     var storedValue = localStorage.getItem("mail");
     function plus(){
              setadd(1)
-                  window.scrollTo({
-                    top: document.documentElement.scrollHeight,
-                    behavior: 'smooth', // Optional: Adds smooth scrolling animation
-                  });
 
                 
               }
@@ -29,9 +29,38 @@ export function OrderDetails(){
          setform(data)
          
     }
-   
-    const ordercreate=async()=>{
-        const values={
+    useEffect(()=>{
+      const fetchDataOrder = async () => {
+          console.log("well it is called here")
+          try {
+            const response = await fetch('http://localhost:4000/api/order/get',{
+              method: 'POST',
+              headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(getorders),
+            }); // Replace with your API endpoint
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            const jsonData = await response.json();
+           
+            const newArrayData = jsonData.array;
+           console.log(newArrayData)
+            // Append the fetched data to the existing data array
+            setorder([...newArrayData]);
+           
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        };
+        fetchDataOrder()
+        console.log("Finish array",Order)
+      },[count])
+      
+    const ordercreate=async(e)=>{
+      e.preventDefault();
+      const values={
             name:name1,
             date:date,
             phone:parseInt(phone1),
@@ -41,7 +70,7 @@ export function OrderDetails(){
         }
 
         try {
-            const response = await fetch('https://poultry-back.vercel.app/api/order/post', {
+            const response = await fetch('http://localhost:4000/api/order/post', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -52,13 +81,15 @@ export function OrderDetails(){
             const jsonData = await response.json();
 
             if (!response.ok) {
+
+              setcount(()=>count+1);
+             setadd(0);
+             setIsVisible(true);
+
               throw new Error('Network response was not ok');
             }
             
-            if (jsonData.message==="greater"){
-                     console.log("value is greater navaneesh navaneesh")
-                       alert("Try Preminum to add more")
-            }
+            
           } catch (error) {
             console.error('Error:', error);
           }
@@ -66,39 +97,12 @@ export function OrderDetails(){
     const getorders={
       mailid:storedValue
     }
-    useEffect(()=>{
-    const fetchDataOrder = async () => {
-        console.log("well it is called here")
-        try {
-          const response = await fetch('https://poultry-back.vercel.app/api/order/get',{
-            method: 'POST',
-            headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(getorders),
-          }); // Replace with your API endpoint
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          const jsonData = await response.json();
-         
-          const newArrayData = jsonData.array;
-         console.log(newArrayData)
-          // Append the fetched data to the existing data array
-          setorder([...newArrayData]);
-         
-        } catch (error) {
-          console.error('Error:', error);
-        }
-      };
-      fetchDataOrder()
-      console.log("Finish array",Order)
-    },[])
+  
 
-    function formorder(data){
-        setform(data)
-   }
-   const orderUpdate=async()=>{
+  
+
+   const orderUpdate=async(e)=>{
+    e.preventDefault();
        const values={
            name:name1,
            date:date,
@@ -108,7 +112,7 @@ export function OrderDetails(){
            mailfind:storedValue 
        }
        try {
-           const response = await fetch('https://poultry-back.vercel.app/api/order/update', {
+           const response = await fetch('http://localhost:4000/api/order/update', {
              method: 'POST',
              headers: {
                'Content-Type': 'application/json',
@@ -117,8 +121,9 @@ export function OrderDetails(){
            });
       
            if (response.ok) {
+            setcount(()=>count+1);
+
              console.log('Post created successfully');
-             window.location.reload()
            } else {
              console.log('Failed to create post');
            }
@@ -128,7 +133,7 @@ export function OrderDetails(){
    }
    const orderdelete=async(val)=>{
     try {
-      const response = await fetch('https://poultry-back.vercel.app/api/order/delete', {
+      const response = await fetch('http://localhost:4000/api/order/delete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -137,8 +142,8 @@ export function OrderDetails(){
       });
   
       if (response.ok) {
+        setcount(()=>count+1);
         console.log('Deleted successfully');
-        window.location.reload()
       } else {
         console.log('Failed to create post');
       }
@@ -159,20 +164,22 @@ export function OrderDetails(){
             <>
              {  form==data.name?
                <>
-               <div className="order"> 
-                  <div className="innerorder">
-                    <p >Name</p>
-                    <input type="text" value={name1} onChange={(e)=>setname(e.target.value)}/>
+               <div className="extra_outer"> 
+                  <div className="form_style">
+                    <form className="outer_form">
+                    <p> Name </p>
+                    <input className="input_form" type="text" value={name1} onChange={(e)=>setname(e.target.value)}/>
                     <p>Date</p>
                     <input type="date" value={date}
                    className="input_form"
                     onChange={(e)=>setdate1(e.target.value)}></input>                    <p>Phone Number</p>
-                    <input type="text" value={phone1} onChange={(e)=>setphone(e.target.value)}/>
+                    <input className="input_form" type="text" value={phone1} onChange={(e)=>setphone(e.target.value)}/>
                     <p>Number of Eggs</p>
-                    <input type="text" value={egg1} onChange={(e)=>setegg(e.target.value)}/>
+                    <input  className="input_form" type="text" value={egg1} onChange={(e)=>setegg(e.target.value)}/>
                     <p>Address</p>
-                    <input type="text" value={address1} onChange={(e)=>setaddress(e.target.value)}/>
-                    <button onClick={()=>orderUpdate()}>Update</button>
+                    <input className="input_form" type="text" value={address1} onChange={(e)=>setaddress(e.target.value)}/>
+                    <button className="submit1" onClick={(e)=>orderUpdate(e)}>Update</button>
+                    </form>
                     </div>
                 </div>
                </>
@@ -221,7 +228,7 @@ export function OrderDetails(){
                      <p>Address</p> 
                      <input className="input_form" type="text"  value={address1} onChange={(e)=>setaddress(e.target.value)}/>
                      <br/>  
-                     <button className="submit1" onClick={()=>ordercreate()}>Add Order</button>
+                     <button className="submit1" onClick={(e)=>{ordercreate(e); }}>Add Order</button>
                      </form>
                      </div>
                     </div>

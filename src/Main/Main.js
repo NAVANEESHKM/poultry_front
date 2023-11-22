@@ -107,7 +107,7 @@ export function Main() {
           localStorage.removeItem("mail");
           localStorage.removeItem("password");
 
-          navigate('/blogs', { replace: true }); // Replace '/new-page' with the URL of the page you want to navigate to
+          navigate('/login', { replace: true }); // Replace '/new-page' with the URL of the page you want to navigate to
      }
      return (
           <>

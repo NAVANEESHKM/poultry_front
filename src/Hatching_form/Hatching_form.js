@@ -24,7 +24,7 @@ export function Hatching_form(){
     event.preventDefault();
 
     try {
-      const response = await fetch('https://poultry-back.vercel.app/api/profile/create/hatching', {
+      const response = await fetch('http://localhost:4000/api/profile/create/hatching', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

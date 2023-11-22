@@ -5,6 +5,8 @@ import {Employee_form} from "../Employee_form/Employee_form.js"
 import "./Employee.css";
 
 export function Employee(){
+  const [count, setCount] = useState(0);
+
   const [deleteId,setDelete]=useState("")
   const[editId,setEditID]=useState(-1)
   const [data, setData] = useState([]);
@@ -28,7 +30,7 @@ export function Employee(){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://poultry-back.vercel.app/api/profile/get',{
+        const response = await fetch('http://localhost:4000/api/profile/get',{
           method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,6 +47,8 @@ export function Employee(){
         console.log(newArrayData);
   
         // Update the data state with the new array data
+        if(newArrayData.length == 0)setData([])
+        else
         setData([...newArrayData]);
         console.log("Final array", data);
       } catch (error) {
@@ -54,7 +58,7 @@ export function Employee(){
   
     console.log("fetch before");
     fetchData(); // Call the fetchData function
-  }, []);
+  }, [count]);
   
   var[id1,setid1]=useState("")  
   var[Fn1,setfn1]=useState("")
@@ -80,7 +84,7 @@ export function Employee(){
    
 
    try {
-     const response = await fetch('https://poultry-back.vercel.app/api/profile/create/edit', {
+     const response = await fetch('http://localhost:4000/api/profile/create/edit', {
        method: 'POST',
        headers: {
          'Content-Type': 'application/json',
@@ -89,8 +93,9 @@ export function Employee(){
      });
 
      if (response.ok) {
+      setCount(()=>count+2);
+      setEditID(-1)
        console.log('Post created successfully');
-       window.location.reload()
      } else {
        console.log('Failed to create post');
      }
@@ -106,7 +111,7 @@ export function Employee(){
 }
    console.log(deleteId)
   try {
-    const response = await fetch('https://poultry-back.vercel.app/api/profile/delete', {
+    const response = await fetch('http://localhost:4000/api/profile/delete', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -115,8 +120,8 @@ export function Employee(){
     });
 
     if (response.ok) {
-      console.log('Deleted successfully');
-      window.location.reload()
+      setCount(()=>count+2);
+       console.log('Deleted successfully');
     } else {
       console.log('Failed to create post');
     }
@@ -154,7 +159,7 @@ export function Employee(){
         
           {
           
-          data.map((row) => (
+          data?.map((row) => (
         
             row.id===editId ?
            

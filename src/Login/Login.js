@@ -18,7 +18,7 @@ import { Link, useNavigate } from 'react-router-dom';
     event.preventDefault();
 
     try {
-      const response = await fetch("https://poultry-back.vercel.app/api/customer/find", {
+      const response = await fetch("https://poultry-backends.onrender.com/api/customer/find", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ import { Link, useNavigate } from 'react-router-dom';
            <div className="pairer">
             <input id="password" 
              value={Password}
-             type="text"
+             type="password"
              onChange={(e)=>setpassword(e.target.value)}
             />
              <p className="indicator">{passwordmanger}</p>

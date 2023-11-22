@@ -16,7 +16,7 @@ import  "./Signup.css"
     event.preventDefault();
 
     try {
-      const response = await fetch("https://poultry-back.vercel.app/api/customer/find", {
+      const response = await fetch("https://poultry-backends.onrender.com/api/customer/find", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ import  "./Signup.css"
     
 
     try {
-      const response = await fetch("https://poultry-back.vercel.app/api/customer/create", {
+      const response = await fetch("https://poultry-backends.onrender.com/api/customer/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -90,7 +90,7 @@ import  "./Signup.css"
     event.preventDefault();
 
     try {
-      const response = await fetch("https://poultry-back.vercel.app/api/customer/update", {
+      const response = await fetch("https://poultry-backends.onrender.com/api/customer/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -137,7 +137,7 @@ import  "./Signup.css"
            <div className="pairer">
             <input id="password" 
              value={Password}
-             type="text"
+             type="password"
              onChange={(e)=>setpassword(e.target.value)}
             />
              <p className="indicator">{passwordmanger}</p>
@@ -150,7 +150,7 @@ import  "./Signup.css"
         <button className="signup" onClick={(e)=>handlesubmit2(e)} type="submit">Signup</button><br/>
 
         <div className="down-react">
-        <p className="info">Already having an account <Link className="login-link" to="/blogs">Login</Link></p>
+        <p className="info">Already having an account <Link className="login-link" to="/login">Login</Link></p>
         <Link className="login-link" to="/admin_login">Admin Page</Link>
         </div>
         <h1>{exister}</h1>

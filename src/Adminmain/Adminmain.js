@@ -3,8 +3,9 @@ import "./Adminmain.css";
 import { Link, useNavigate } from 'react-router-dom';
 
 export function Adminmain() {
+  const[count,setcount]=useState(0);
   const [Admin, setAdmin] = useState([]);
-  const[Adup,setAdup]=useState([])
+  const[Adup,setAdup]=useState([]);
   const maxCount = 5; 
   const [emp,setemp]=useState("")
   const [prod,setprod]=useState("")
@@ -16,7 +17,7 @@ export function Adminmain() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://poultry-back.vercel.app/admin/userinfo');
+        const response = await fetch('http://localhost:4000/admin/userinfo');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -39,7 +40,7 @@ export function Adminmain() {
 
     console.log("fetch before");
     fetchData(); // Call the fetchData function
-  }, []);
+  }, [count]);
   const updatedata={
     mailid:mailidlocal,
     password:passwordlocal,
@@ -52,7 +53,7 @@ export function Adminmain() {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://poultry-back.vercel.app/admin/value/update', {
+      const response = await fetch('http://localhost:4000/admin/value/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +77,7 @@ export function Adminmain() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://poultry-back.vercel.app/admin/value/get',{
+        const response = await fetch('http://localhost:4000/admin/value/get',{
           method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +104,7 @@ export function Adminmain() {
   
     console.log("fetch before");
     fetchData(); // Call the fetchData function
-  }, []);
+  }, [count]);
 const DeleteUser=async(data)=>{
        const user={
             mailid:data.mailid,
@@ -111,7 +112,7 @@ const DeleteUser=async(data)=>{
        }
 
     try {
-        const response = await fetch('https://poultry-back.vercel.app/api/delete/user', {
+        const response = await fetch('http://localhost:4000/api/delete/user', {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -120,6 +121,7 @@ const DeleteUser=async(data)=>{
         });
       
         if (response.ok) {
+          setcount(()=>count+1);
           console.log('Delete request successful');
         } else {
           console.log('Failed to delete data');
