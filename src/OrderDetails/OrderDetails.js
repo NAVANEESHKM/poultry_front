@@ -133,7 +133,7 @@ export function OrderDetails(){
    }
    const orderdelete=async(val)=>{
     try {
-      const response = await fetch('http://localhost:4000/api/order/delete', {
+      const response = await fetch('https://poultry-backends.onrender.com/api/order/delete', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
