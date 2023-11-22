@@ -30,7 +30,7 @@ export function Employee(){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/profile/get',{
+        const response = await fetch('https://poultry-backends.onrender.com/api/profile/get',{
           method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ export function Employee(){
    
 
    try {
-     const response = await fetch('http://localhost:4000/api/profile/create/edit', {
+     const response = await fetch('https://poultry-backends.onrender.com/api/profile/create/edit', {
        method: 'POST',
        headers: {
          'Content-Type': 'application/json',
@@ -111,7 +111,7 @@ export function Employee(){
 }
    console.log(deleteId)
   try {
-    const response = await fetch('http://localhost:4000/api/profile/delete', {
+    const response = await fetch('https://poultry-backends.onrender.com/api/profile/delete', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

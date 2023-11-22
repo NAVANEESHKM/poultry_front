@@ -17,7 +17,7 @@ export function Adminmain() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/admin/userinfo');
+        const response = await fetch('https://poultry-backends.onrender.com/admin/userinfo');
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -53,7 +53,7 @@ export function Adminmain() {
     event.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:4000/admin/value/update', {
+      const response = await fetch('https://poultry-backends.onrender.com/admin/value/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ export function Adminmain() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/admin/value/get',{
+        const response = await fetch('https://poultry-backends.onrender.com/admin/value/get',{
           method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -112,7 +112,7 @@ const DeleteUser=async(data)=>{
        }
 
     try {
-        const response = await fetch('http://localhost:4000/api/delete/user', {
+        const response = await fetch('https://poultry-backends.onrender.com/api/delete/user', {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

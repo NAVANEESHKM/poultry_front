@@ -8,7 +8,7 @@ function Front(){
     var[PasswordLatest,setPasswordLatest]=useState("")
     const handleGetRequest = async () => {
         try {
-          const response = await fetch("http://localhost:4000/api/customer/latest", {
+          const response = await fetch("https://poultry-backends.onrender.com/api/customer/latest", {
             method: "GET", 
             headers: {},
           });

@@ -18,7 +18,7 @@ import { Link, useNavigate } from 'react-router-dom';
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:4000/api/admin", {
+      const response = await fetch("https://poultry-backends.onrender.com/api/admin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
