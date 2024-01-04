@@ -2,139 +2,138 @@
 
 /* Container for the entire page */
 .outer_home {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(227, 240, 244);
-    padding: 0.5%;
-    border-radius: 2%;
-    height: 100vh;
-      overflow: hidden;
-    width: 80%;
-    margin-left: 2%;
-    font-family: 'Dosis', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(227, 240, 244);
+  padding: 0.5%;
+  border-radius: 2%;
+  height: 100vh;
+    overflow: hidden;
+  width: 80%;
+  margin-left: 2%;
+  font-family: 'Dosis', sans-serif;
 font-family: 'Exo 2', sans-serif;
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Libre Baskerville', serif;
 font-family: 'Mukta', sans-serif;
-  }
-  
-  /* Main content area */
-  .homee {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Individual data blocks */
-  .homeinner {
-    flex: 1;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  /* Styling for data numbers */
-  .homeinner p {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0;
-    color: #333;
-  }
-  
-  /* Styling for data labels */
-  .homeinner p:last-child {
-    font-size: 18px;
-    font-weight: normal;
-    color: #777;
-  }
-  
-  /* Styling for images */
-  .mainimage {
-    max-width: 100px;
-    height: auto;
-  }
-  
-  /* Styling for the chart */
-  .chart {
-    width: 100%;
-    margin-top: 1px;
-    text-align: center;
-    margin-bottom: 1%;
+}
 
+/* Main content area */
+.homee {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual data blocks */
+.homeinner {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling for data numbers */
+.homeinner p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Styling for data labels */
+.homeinner p:last-child {
+  font-size: 18px;
+  font-weight: normal;
+  color: #777;
+}
+
+/* Styling for images */
+.mainimage {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Styling for the chart */
+.chart {
+  width: 100%;
+  margin-top: 1px;
+  text-align: center;
+  margin-bottom: 1%;
+
+}
+.c11{
+  margin-bottom: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sepdot{
+  background-color: #ffffff;
+  width: 120%;
+  height: 250%;
+  border-radius: 10%;
+  padding: 0%;
+  padding-top: 3.5%;
+  padding-bottom: 3.5%;
+}
+.sepdot1{
+  background-color: #ffffff;
+  border-radius: 8%;
+  width: 280%;
+  height: 500%;
+  padding: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.c11 input{
+  border-radius: 5%;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; /* Make it responsive to the parent container */
+  padding: 10px; /* Add spacing around the chart */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(190, 67, 67, 0.2); /* Add a shadow */
+  margin-top: 20px; /* Adjust the margin as needed */
+  height: 0%;
+  overflow: hidden; 
+  background-color: rgb(227, 240, 244);
+}
+
+.dot {  
+  max-width: 200%; 
+max-height: 100%;
+  padding: 5%;
+}
+
+.line {
+  max-width: 200%; 
+  max-height: 1200%;
+    padding: 20px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .homee {
+    flex-direction: column;
   }
-  .c11{
-    margin-bottom: 0%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  .homeinner {
+    margin-bottom: 20px;
   }
-  .sepdot{
-    background-color: #ffffff;
-    width: 120%;
-    height: 250%;
-    border-radius: 10%;
-    padding: 0%;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
-  }
-  .sepdot1{
-    background-color: #ffffff;
-    border-radius: 8%;
-    width: 280%;
-    height: 500%;
-    padding: 1%;
-    margin-left: 2%;
-    margin-right: 2%;
-  }
-  
-  .c11 input{
-    border-radius: 5%;
-  }
- 
-  .chart-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%; /* Make it responsive to the parent container */
-    padding: 10px; /* Add spacing around the chart */
-    border-radius: 8px; /* Add rounded corners */
-    box-shadow: 0 2px 4px rgba(190, 67, 67, 0.2); /* Add a shadow */
-    margin-top: 20px; /* Adjust the margin as needed */
-    height: 0%;
-    overflow: hidden; 
-    background-color: rgb(227, 240, 244);
-  }
-  
-  .dot {  
-    max-width: 200%; 
-  max-height: 100%;
-    padding: 5%;
-  }
- 
-  .line {
-    max-width: 200%; 
-    max-height: 1200%;
-      padding: 20px;
-  }
-  
-  /* Responsive layout for smaller screens */
-  @media (max-width: 768px) {
-    .homee {
-      flex-direction: column;
-    }
-    .homeinner {
-      margin-bottom: 20px;
-    }
-  }
-  .dotclass{
-    width: 10%;
-    height: 10%;
-  }
-  
+}
+.dotclass{
+  width: 10%;
+  height: 10%;
+}
