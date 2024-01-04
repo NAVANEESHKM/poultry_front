@@ -55,7 +55,7 @@ export function Employee_form(){
         <div className="form_style">
           
         <form className="outer_form">
-            <label>Id in form</label>
+            <label>Id</label>
             <input type="text"
             className="input_form"
                     value={id}
