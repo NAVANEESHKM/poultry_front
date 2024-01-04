@@ -112,12 +112,16 @@ font-family: 'Mukta', sans-serif;
     background-color: rgb(227, 240, 244);
   }
   
-  .dot {  
+  /* .dot {  
     max-width: 200%; 
   max-height: 100%;
     padding: 5%;
+  } */
+    .dot {  
+    max-width: 50%; 
+  max-height: 50%;
+    padding: 0%;
   }
-  
   .line {
     max-width: 200%; 
     max-height: 1200%;
