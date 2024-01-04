@@ -77,7 +77,7 @@ font-family: 'Mukta', sans-serif;
   justify-content: space-around;
 }
 .sepdot{
-  background-color: #ffffff;
+  background-color: red;
   width: 80%;
   height: 80%;
   border-radius: 10%;
@@ -86,7 +86,7 @@ font-family: 'Mukta', sans-serif;
   padding-bottom: 3.5%;
 }
 .sepdot1{
-  background-color: #ffffff;
+  background-color: red;
   border-radius: 8%;
   width: 80%;
   height: 80%;
