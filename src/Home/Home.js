@@ -210,9 +210,9 @@ const chartOptions = {
         </div>
      
       </div>
-       
+{/*        
       <div className="chart">
-        
+         */}
       <div className="chart-container">
         <div className="sepdot">
           <h2>Order Graph</h2>
@@ -224,8 +224,8 @@ const chartOptions = {
 </div>
       </div>
       </div>
-
-    </div>
+{/* 
+    </div> */}
     </>
   )
 }

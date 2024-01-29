@@ -9,7 +9,7 @@
   background-color: rgb(227, 240, 244);
   padding: 0.5%;
   border-radius: 2%;
-  height: 80%;
+  height: 100%;
     overflow: hidden;
   width: 80%;
   margin-left: 2%;
@@ -63,13 +63,13 @@ font-family: 'Mukta', sans-serif;
 }
 
 /* Styling for the chart */
-.chart {
+/* .chart {
   width: 100%;
   margin-top: 1px;
   text-align: center;
   margin-bottom: 1%;
 
-}
+} */
 .c11{
   margin-bottom: 0%;
   display: flex;
@@ -77,22 +77,20 @@ font-family: 'Mukta', sans-serif;
   justify-content: space-around;
 }
 .sepdot{
-  background-color: red;
-  width: 80%;
-  height: 80%;
-  border-radius: 10%;
-  padding: 0%;
-  padding-top: 3.5%;
-  padding-bottom: 3.5%;
+  background-color: lightgoldenrodyellow;
+  width: 30%;
+  height: 22%;
+  border-radius: 5%;
+  padding: 5% 5%;
+ 
 }
 .sepdot1{
-  background-color: red;
-  border-radius: 8%;
-  width: 80%;
-  height: 80%;
-  padding: 1%;
+  background-color: lightgoldenrodyellow;
+  width: 50%;
+  height: 90%;
+  padding: 5% 5%;
   margin-left: 2%;
-  margin-right: 2%;
+  
 }
 
 .c11 input{
@@ -103,25 +101,26 @@ font-family: 'Mukta', sans-serif;
   display: flex;
   flex-direction: row;
   width: 100%; /* Make it responsive to the parent container */
-  padding: 50px; /* Add spacing around the chart */
+  padding: 1%; /* Add spacing around the chart */
   border-radius: 8px; /* Add rounded corners */
   box-shadow: 0 2px 4px rgba(190, 67, 67, 0.2); /* Add a shadow */
-  margin-top: 20px; /* Adjust the margin as needed */
+  margin-top: 1%; /* Adjust the margin as needed */
   height: 0%;
   overflow: hidden; 
   background-color: rgb(227, 240, 244);
 }
 
 .dot {  
-  max-width: 100%; 
+  /* max-width: 100%; 
 max-height: 50%;
-  padding: 5%;
+  padding: 5%; */
+  
 }
 
 .line {
-  max-width: 100%; 
+  /* max-width: 100%; 
   max-height: 50%;
-    padding: 20px;
+    padding: 20px; */
 }
 
 /* Responsive layout for smaller screens */
