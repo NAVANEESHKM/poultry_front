@@ -1,4 +1,9 @@
-/* Home.css */
+/* Resetting styles for compatibility */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 /* Container for the entire page */
 .outer_home {
@@ -10,14 +15,10 @@
   padding: 0.5%;
   border-radius: 2%;
   height: 100%;
-    overflow: hidden;
+  overflow: hidden;
   width: 80%;
   margin-left: 2%;
   font-family: 'Dosis', sans-serif;
-font-family: 'Exo 2', sans-serif;
-font-family: 'Josefin Sans', sans-serif;
-font-family: 'Libre Baskerville', serif;
-font-family: 'Mukta', sans-serif;
 }
 
 /* Main content area */
@@ -63,64 +64,56 @@ font-family: 'Mukta', sans-serif;
 }
 
 /* Styling for the chart */
-/* .chart {
-  width: 100%;
-  margin-top: 1px;
-  text-align: center;
-  margin-bottom: 1%;
-
-} */
-.c11{
+.c11 {
   margin-bottom: 0%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.sepdot{
+
+.sepdot {
   background-color: lightgoldenrodyellow;
   width: 30%;
   height: 22%;
   border-radius: 5%;
   padding: 5% 5%;
- 
 }
-.sepdot1{
+
+.sepdot1 {
   background-color: lightgoldenrodyellow;
   width: 50%;
   height: 90%;
   padding: 5% 5%;
   margin-left: 2%;
-  
 }
 
-.c11 input{
+.c11 input {
   border-radius: 5%;
 }
 
 .chart-container {
   display: flex;
   flex-direction: row;
-  width: 100%; /* Make it responsive to the parent container */
-  padding: 1%; /* Add spacing around the chart */
-  border-radius: 8px; /* Add rounded corners */
-  box-shadow: 0 2px 4px rgba(190, 67, 67, 0.2); /* Add a shadow */
-  margin-top: 1%; /* Adjust the margin as needed */
+  width: 100%;
+  padding: 1%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(190, 67, 67, 0.2);
+  margin-top: 1%;
   height: 0%;
-  overflow: hidden; 
+  overflow: hidden;
   background-color: rgb(227, 240, 244);
 }
 
-.dot {  
-  /* max-width: 100%; 
-max-height: 50%;
+.dot {
+  /* max-width: 100%;
+  max-height: 50%;
   padding: 5%; */
-  
 }
 
 .line {
-  /* max-width: 100%; 
+  /* max-width: 100%;
   max-height: 50%;
-    padding: 20px; */
+  padding: 20px; */
 }
 
 /* Responsive layout for smaller screens */
@@ -132,7 +125,8 @@ max-height: 50%;
     margin-bottom: 20px;
   }
 }
-.dotclass{
+
+.dotclass {
   width: 10%;
   height: 10%;
 }
