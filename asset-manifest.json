@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.48ec0cca.css",
-    "main.js": "/static/js/main.42cf8f23.js",
-    "static/media/poul_prof1.jpeg": "/static/media/poul_prof1.7f05c868874566e4e293.jpeg",
-    "static/media/poul_prof2.jpg": "/static/media/poul_prof2.094a7dd74dc88159d833.jpg",
-    "static/media/main_image.jpg": "/static/media/main_image.7e8453cd73ded767f1d5.jpg",
-    "index.html": "/index.html",
-    "main.48ec0cca.css.map": "/static/css/main.48ec0cca.css.map",
-    "main.42cf8f23.js.map": "/static/js/main.42cf8f23.js.map"
+    "main.css": "/poultry_front/static/css/main.cb0b6c2c.css",
+    "main.js": "/poultry_front/static/js/main.3ae63440.js",
+    "static/media/poul_prof1.jpeg": "/poultry_front/static/media/poul_prof1.7f05c868874566e4e293.jpeg",
+    "static/media/poul_prof2.jpg": "/poultry_front/static/media/poul_prof2.094a7dd74dc88159d833.jpg",
+    "static/media/main_image.jpg": "/poultry_front/static/media/main_image.7e8453cd73ded767f1d5.jpg",
+    "index.html": "/poultry_front/index.html",
+    "main.cb0b6c2c.css.map": "/poultry_front/static/css/main.cb0b6c2c.css.map",
+    "main.3ae63440.js.map": "/poultry_front/static/js/main.3ae63440.js.map"
   },
   "entrypoints": [
-    "static/css/main.48ec0cca.css",
-    "static/js/main.42cf8f23.js"
+    "static/css/main.cb0b6c2c.css",
+    "static/js/main.3ae63440.js"
   ]
 }
